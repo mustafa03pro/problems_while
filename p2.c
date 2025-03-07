@@ -1,14 +1,24 @@
 #include<stdio.h>
 int main(){
-    int i=1,n,s=0;
+    int r,e,o,z;
+    long n;
     printf("enter the no: ");
     scanf("%d",&n);
-    while (i<=n)
+    e=o=z=0;
+    do
     {
-       s+=i;
-       i++; 
-    }
-    printf("sum=%d,avg=%.2f",s, (float)s/n);
+        r=n%10;
+        if (r==0)z++;
+        else if (r%2==0)e++;
+        else o++;
+        n=n/10;
+        
+        
+        
+    } while (n);
+    printf("even=%d,odd=%d,zero=%d",e,o,z);
     return 0;
+    
+
 
 }
