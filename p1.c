@@ -1,13 +1,22 @@
 #include<stdio.h>
 int main(){
-    int i=1,n;
-    printf("enter the no: ");
+    int r,max=-9,min=9;
+    long n;
+    printf("enetr the no: ");
     scanf("%d",&n);
-    while (i<=n)
+    do
     {
-       if(i%2!=0)printf("%4d",i);
-       i++; 
-    }
+        r=n%10;
+        if (max<r)max=r;
+        if (min>r)min=r;
+        n=n/10;
+        
+        
+        
+    } while (n!=0);
+    printf("min=%d,max=%d",min,max);
     return 0;
+    
+
 
 }

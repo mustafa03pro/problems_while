@@ -1,16 +1,28 @@
 #include<stdio.h>
+#include<conio.h>
 int main(){
-    int b,p;
-    long r=1;
-    printf("enter the p,r value: ");
-    scanf("%d%d",&b,&p);
-    while (p>=1)
+    int r;
+    long rev=0,n;
+    
+    printf("enter the no: ");
+    scanf("%ld",&n);
+    while (n!=0)
     {
-       r=b*r;
-       p--;
-        
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+
     }
-    printf("power=%ld",r);
+    printf("reverse n0 is %ld",rev);
+    
+    
+    
+    
+    
+    
+   
     return 0;
+    
+
 
 }

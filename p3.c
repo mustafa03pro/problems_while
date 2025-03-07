@@ -1,19 +1,30 @@
 #include<stdio.h>
 int main(){
-    int s2=0,n,s1=0;
+    int r,d,c,f=0;
+    long n;
     printf("enter the no: ");
-    scanf("%d",&n);
-    while (n>=1)
+    scanf("%ld",&n);
+    printf("enter search no: ");
+    scanf("%d",&d);
+    c=printf("%d",n);
+    if (n<0)c--;
+    do
     {
-       if(n%2==0)s1+=n;
-       
-       else s2+=n;
-       n--;
-
+        r=n%10;
+        if (r==d)
+        
+        printf("\n%d in %d position",d,c,f=1);
+        c--;
+        n=n/10;
 
         
-    }
-    printf("even sum=%d,odd sum=%d",s1,s2);
+        
+    } while (n!=0);
+    if(f==0)printf("\n%d not found",d);
+    
+   
     return 0;
+    
+
 
 }
