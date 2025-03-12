@@ -1,24 +1,21 @@
 #include<stdio.h>
 int main(){
-    int r,e,o,z;
-    long n;
-    printf("enter the no: ");
-    scanf("%d",&n);
-    e=o=z=0;
-    do
-    {
-        r=n%10;
-        if (r==0)z++;
-        else if (r%2==0)e++;
-        else o++;
-        n=n/10;
-        
-        
-        
-    } while (n);
-    printf("even=%d,odd=%d,zero=%d",e,o,z);
-    return 0;
+    int i=1, t;
+    scanf("%d",&t);
+    if(t<0){
+        printf("Negative values Not allowed");
+        return 0;
+    }
+    if(t==0){
+        printf("Zero Not allowed");
+        return 0;
+
+    }
+    while(i<=10){
+        printf("%d x %d = %d\n",t,i,t*i);
+        i++;
+
+    }
     
-
-
+    return 0;
 }

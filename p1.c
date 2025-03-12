@@ -1,22 +1,30 @@
 #include<stdio.h>
 int main(){
-    int r,max=-9,min=9;
-    long n;
-    printf("enetr the no: ");
+    int i=1,n,r=0,s=0;
     scanf("%d",&n);
-    do
+    if(n<0)
     {
-        r=n%10;
-        if (max<r)max=r;
-        if (min>r)min=r;
-        n=n/10;
-        
-        
-        
-    } while (n!=0);
-    printf("min=%d,max=%d",min,max);
+        printf("Negative value Not Allowed");
     return 0;
+    }
     
+    while(i<n){
+       
+       if(n%i==0)
+       {
+        s+=i;
+       }
+        i++;
+    }
+   
+    if(n==s){
+        printf("%d is a perfect number.",n);
+    }
+    else printf("%d is NOT a perfect number.",n);    
+       
+
+      
+    return 0;
 
 
 }
