@@ -1,30 +1,28 @@
 #include<stdio.h>
 int main(){
-    int r,d,c,f=0;
-    long n;
-    printf("enter the no: ");
-    scanf("%ld",&n);
-    printf("enter search no: ");
+    int i=1,n,d,r=0,c=0;
+    scanf("%d",&n);
     scanf("%d",&d);
-    c=printf("%d",n);
-    if (n<0)c--;
-    do
-    {
+    
+
+    
+    while(n!=0){
         r=n%10;
-        if (r==d)
         
-        printf("\n%d in %d position",d,c,f=1);
-        c--;
+        if(r==d){
+            c++;
+        }
         n=n/10;
+        
 
         
         
-    } while (n!=0);
-    if(f==0)printf("\n%d not found",d);
+
+    }
+    if(c>0){
+        printf("%d occurs %d times.",d,c);
+    }
+
     
-   
     return 0;
-    
-
-
 }
